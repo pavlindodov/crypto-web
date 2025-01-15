@@ -1,3 +1,5 @@
+@section('title', 'CryptoWeb | Signup')
+
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
