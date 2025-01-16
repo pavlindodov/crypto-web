@@ -1,21 +1,18 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CoinGeckoController;
 
+// Ruta de inicio (página principal)
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Grupo de rutas protegidas que requieren autenticación
 Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
+    'auth:sanctum',  // Asegura que el usuario esté autenticado usando Sanctum
+    config('jetstream.auth_session'),  // Middleware adicional de Jetstream para gestionar la sesión
+    'verified',  // Asegura que el correo del usuario esté verificado
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    // Ruta protegida para acceder al dashboard
+    Route::get('/dashboard', [CoinGeckoController::class, 'showTopCryptos'])->name('dashboard');
 });
-
-Route::get('/dashboard', [CoinGeckoController::class, 'showTopCryptos'])->name('dashboard');
