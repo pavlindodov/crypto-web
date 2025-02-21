@@ -5,3 +5,61 @@
 [x-cloak] {
     display: none;
 }
+
+/*Fix Dashboard*/
+@media (min-width: 640px) {
+    nav div {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+}
+@layer components {
+    .dark .bg-white {
+        @apply bg-gray-800;
+    }
+
+    .dark .border-gray-300 {
+        @apply border-gray-600;
+    }
+
+    .dark .text-gray-500 {
+        @apply text-gray-400;
+    }
+
+    .dark .text-gray-600 {
+        @apply text-gray-300;
+    }
+
+    .dark .text-gray-700 {
+        @apply text-gray-300;
+    }
+
+    .dark .text-gray-900 {
+        @apply text-gray-100;
+    }
+
+    .dark .border-b,
+    .dark .border-t {
+        @apply border-gray-700;
+    }
+
+    .dark div {
+        @apply bg-gray-800 text-white;
+    }
+
+    .dark a {
+        @apply text-gray-100;
+    }
+
+    .dark a:hover {
+        @apply text-gray-300;
+    }
+
+    a:hover {
+        @apply text-gray-500;
+    }
+
+    .dark input {
+        @apply bg-gray-800;
+    }
+}
