@@ -15,51 +15,72 @@
 }
 @layer components {
     .dark .bg-white {
-        @apply bg-gray-800;
+        @apply bg-gray-900 !important;
     }
 
     .dark .border-gray-300 {
-        @apply border-gray-600;
+        @apply border-gray-600 !important;
     }
 
     .dark .text-gray-500 {
-        @apply text-gray-400;
+        @apply text-gray-400 !important;
     }
 
     .dark .text-gray-600 {
-        @apply text-gray-300;
+        @apply text-gray-300 !important;
     }
 
     .dark .text-gray-700 {
-        @apply text-gray-300;
+        @apply text-gray-300 !important;
     }
 
     .dark .text-gray-900 {
-        @apply text-gray-100;
+        @apply text-gray-100 !important;
     }
 
     .dark .border-b,
     .dark .border-t {
-        @apply border-gray-700;
+        @apply border-gray-700 !important;
     }
 
     .dark div {
-        @apply bg-gray-800 text-white;
+        @apply bg-gray-900 text-white !important;
     }
 
     .dark a {
-        @apply text-gray-100;
+        @apply text-gray-100 !important;
     }
 
     .dark a:hover {
-        @apply text-gray-300;
+        @apply text-gray-300 !important;
     }
 
     a:hover {
-        @apply text-gray-500;
+        @apply text-gray-500 !important;
     }
 
     .dark input {
-        @apply bg-gray-800;
+        @apply bg-gray-700 !important;
     }
+
+    input {
+        @apply bg-gray-100 !important;
+    }
+
+    .dark button:not(.btn-exclude) {
+        @apply bg-blue-500 text-white !important;
+    }
+
+    .dark button:not(.btn-exclude):hover {
+        @apply bg-blue-700 !important;
+    }
+
+    button:not(.btn-exclude) {
+        @apply bg-purple-500 text-white;
+    }
+
+    button:not(.btn-exclude):hover {
+        @apply bg-purple-700 !important;
+    }
+
 }

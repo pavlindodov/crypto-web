@@ -25,5 +25,5 @@
 
 /* Estilo para mejorar la apariencia cuando el botón se activa */
 #button-up:hover {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(255, 0, 0);
 }
