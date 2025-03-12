@@ -76,7 +76,7 @@
     }
 
     button:not(.btn-exclude) {
-        @apply bg-purple-500 text-white;
+        @apply bg-purple-500 text-white !important;
     }
 
     button:not(.btn-exclude):hover {
