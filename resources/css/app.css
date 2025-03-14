@@ -72,23 +72,23 @@
     }
 
     .dark button:not(.btn-exclude) {
-        @apply bg-blue-500 text-white !important;
+        @apply bg-blue-700 text-white !important;
     }
 
     .dark button:not(.btn-exclude):hover {
-        @apply bg-blue-700 !important;
+        @apply bg-blue-500 !important;
     }
 
     button:not(.btn-exclude) {
-        @apply bg-purple-500 text-white !important;
+        @apply bg-purple-700 text-white !important;
     }
 
     button:not(.btn-exclude):hover {
-        @apply bg-purple-700 !important;
+        @apply bg-purple-500 !important;
     }
 
-    .dark .border-purple-500 {
-        border-color: #3b82f6 !important; /* Azul (corresponde a blue-500) */
+    .dark .border-purple-700 {
+        border-color: #1D4ED8 !important; /* Azul (corresponde a blue-700) */
     }
 
 
