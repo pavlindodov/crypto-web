@@ -14,8 +14,16 @@
     }
 }
 @layer components {
+    .dark .bg-gray-100 {
+        @apply bg-gray-900 text-white !important;
+    }
+
+    .dark .bg-gray-300 {
+        @apply bg-gray-950 text-white !important;
+    }
+
     .dark .bg-white {
-        @apply bg-gray-900 !important;
+        @apply bg-gray-800 text-white !important;
     }
 
     .dark .border-gray-300 {
@@ -34,6 +42,10 @@
         @apply text-gray-300 !important;
     }
 
+    .dark .text-gray-800 {
+        @apply text-gray-200 !important;
+    }
+
     .dark .text-gray-900 {
         @apply text-gray-100 !important;
     }
@@ -43,8 +55,16 @@
         @apply border-gray-700 !important;
     }
 
-    .dark div {
-        @apply bg-gray-900 text-white !important;
+    .dark nav {
+        @apply bg-gray-800 text-white !important;
+    }
+
+    .dark header {
+        @apply bg-gray-800 text-white !important;
+    }
+
+    .dark div:not(.div-exclude) {
+        @apply bg-gray-800 text-white !important;
     }
 
     .dark a {
@@ -56,15 +76,13 @@
         @apply text-gray-300 !important;
     }
 
-
-
     a:hover {
         @apply text-gray-500 !important;
 
     }
 
     .dark input {
-        @apply bg-gray-700 !important;
+        @apply bg-gray-700 text-white !important;
     }
 
     input {
@@ -90,6 +108,4 @@
     .dark .border-purple-700 {
         border-color: #1D4ED8 !important; /* Azul (corresponde a blue-700) */
     }
-
-
 }

@@ -3,5 +3,5 @@
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
     document.documentElement.classList.toggle('dark', darkMode);
 ">
-    <span x-text="darkMode ? '🌙' : '☀️'"></span>
+    <span class="mr-2" x-text="darkMode ? '🌙' : '☀️'"></span>
 </button>
