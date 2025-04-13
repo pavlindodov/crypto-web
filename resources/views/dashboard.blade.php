@@ -16,7 +16,7 @@
                         <a href="{{ route('tradingview', ['symbol' => $crypto['symbol']]) }}" class="block">
                             <div class="p-4 border rounded-lg shadow-lg">
                                 <img src="{{ $crypto['image'] }}" alt="{{ $crypto['name'] }} logo" class="w-16 h-16 mx-auto mb-4">
-                                <h3 class="font-bold text-lg text-center">{{ $crypto['name'] }}</h3>
+                                <h3 class="font-overflow font-bold text-lg text-center">{{ $crypto['name'] }}</h3>
                                 <p class="text-center text-gray-700">Price: ${{ number_format($crypto['current_price'], 2) }}</p>
                                 <p class="text-center text-gray-500">24h: {{ number_format($crypto['price_change_percentage_24h'], 2) }}%</p>
                             </div>

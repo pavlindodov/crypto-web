@@ -6,13 +6,21 @@
     display: none;
 }
 
-/*Fix Dashboard*/
+/*Dashboard Fixes*/
 @media (min-width: 640px) {
     nav div {
       margin-top: 0 !important;
       margin-bottom: 0 !important;
     }
 }
+
+.font-overflow {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que exceda el contenedor */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto truncado */
+}
+
+/*Darkmode Fixes*/
 @layer components {
     .dark .bg-gray-100 {
         @apply bg-gray-900 text-white !important;
