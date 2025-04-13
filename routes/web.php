@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoinGeckoController;
+use App\Http\Controllers\TradingViewController;
 
 // Ruta de inicio (página principal)
 Route::get('/', function () {
@@ -16,3 +17,6 @@ Route::middleware([
     // Ruta protegida para acceder al dashboard
     Route::get('/dashboard', [CoinGeckoController::class, 'showTopCryptos'])->name('dashboard');
 });
+
+
+Route::get('/tradingview/{symbol}', [TradingViewController::class, 'show'])->name('tradingview');
