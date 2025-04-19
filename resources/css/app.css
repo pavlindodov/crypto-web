@@ -6,6 +6,15 @@
     display: none;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.tradingview-widget-container {
+    width: 100% !important;
+    height: 80% !important;
+}
+
 /*Dashboard Fixes*/
 @media (min-width: 640px) {
     nav div {
