@@ -1,4 +1,6 @@
 import './bootstrap';
+import './tradingview-widget.js';
+import './scroll-to-top.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('theme') === 'dark') {

@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/css/scroll-to-top.css',
                 'resources/js/scroll-to-top.js',
+                'resources/js/tradingview-widget.js',
             ],
             refresh: true,
         }),
