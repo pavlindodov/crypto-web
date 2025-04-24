@@ -7,5 +7,5 @@
         window.dispatchEvent(new Event('themeChanged'));
     "
 >
-    <span class="mr-2" x-text="darkMode ? '🌙' : '☀️'"></span>
+    <span class="mr-2" x-text="darkMode ? '☀️' : '🌙'"></span>
 </button>
