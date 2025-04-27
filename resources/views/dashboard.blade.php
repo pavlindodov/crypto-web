@@ -8,24 +8,7 @@
         </h2>
     </x-slot>
 
-    <div class="div-exclude py-12">
-        <div class="div-exclude max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    @foreach($topCryptos as $crypto)
-                        <a href="{{ route('tradingview', ['symbol' => $crypto['symbol']]) }}" class="block">
-                            <div class="p-4 border rounded-lg shadow-lg">
-                                <img src="{{ $crypto['image'] }}" alt="{{ $crypto['name'] }} logo" class="w-16 h-16 mx-auto mb-4">
-                                <h3 class="font-overflow font-bold text-lg text-center">{{ $crypto['name'] }}</h3>
-                                <p class="text-center text-gray-700">Price: ${{ number_format($crypto['current_price'], 2) }}</p>
-                                <p class="text-center text-gray-500">24h: {{ number_format($crypto['price_change_percentage_24h'], 2) }}%</p>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-crypto-list :topCryptos="$topCryptos" />
 </x-app-layout>
 <!-- Botón para ir arriba -->
 <button id="button-up">
