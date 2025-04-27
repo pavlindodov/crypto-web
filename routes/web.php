@@ -16,7 +16,7 @@ Route::middleware([
 ])->group(function () {
     // Ruta protegida para acceder al dashboard
     Route::get('/dashboard', [CoinGeckoController::class, 'showTopCryptos'])->name('dashboard');
+
+    // Ruta protegida para TradingView
+    Route::get('/tradingview/{symbol}', [TradingViewController::class, 'show'])->name('tradingview');
 });
-
-
-Route::get('/tradingview/{symbol}', [TradingViewController::class, 'show'])->name('tradingview');
