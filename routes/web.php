@@ -4,9 +4,7 @@ use App\Http\Controllers\CoinGeckoController;
 use App\Http\Controllers\TradingViewController;
 
 // Ruta de inicio (página principal)
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CoinGeckoController::class, 'showWelcome']);
 
 // Grupo de rutas protegidas que requieren autenticación
 Route::middleware([

@@ -12,12 +12,23 @@ class CoinGeckoController extends Controller
         $this->coinGeckoService = $coinGeckoService;
     }
 
+    // Método para el dashboard
     public function showTopCryptos()
     {
-        // Obtenemos las 100 criptomonedas más cotizadas
-        $topCryptos = $this->coinGeckoService->getTopCryptos();
-
-        // Pasamos los datos de las criptomonedas a la vista
+        $topCryptos = $this->getTopCryptosData();
         return view('dashboard', compact('topCryptos'));
+    }
+
+    // Método para la página de bienvenida
+    public function showWelcome()
+    {
+        $topCryptos = $this->getTopCryptosData();
+        return view('welcome', compact('topCryptos'));
+    }
+
+    // Método privado reutilizable
+    private function getTopCryptosData()
+    {
+        return $this->coinGeckoService->getTopCryptos();
     }
 }
