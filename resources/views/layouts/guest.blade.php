@@ -13,6 +13,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/scroll-to-top.css', 'resources/js/scroll-to-top.js'])
 
         <!-- Styles -->
         @livewireStyles
@@ -23,5 +24,6 @@
         </div>
 
         @livewireScripts
+        <x-button-scroll-to-top />
     </body>
 </html>

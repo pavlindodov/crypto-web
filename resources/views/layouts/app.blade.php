@@ -14,6 +14,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/scroll-to-top.css', 'resources/js/scroll-to-top.js'])
         <script>
             if (localStorage.getItem('theme') === 'dark') {
                 document.documentElement.classList.add('dark');
@@ -50,5 +51,6 @@
         @stack('modals')
         @stack('scripts')
         @livewireScripts
+        <x-button-scroll-to-top />
     </body>
 </html>
