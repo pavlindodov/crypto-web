@@ -19,7 +19,7 @@ class CoinGeckoService
     public function getTopCryptos()
     {
         try {
-            return Cache::remember('top_cryptos', now()->addMinutes(60), function () {
+            return Cache::remember('top_cryptos', now()->addSecond(60), function () {
                 // Construimos la URL completa, incluyendo la clave API como parte de la query string
                 $url = $this->apiUrl . 'coins/markets';
 
