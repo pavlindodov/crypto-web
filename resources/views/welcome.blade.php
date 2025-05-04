@@ -29,10 +29,6 @@
                 <main class="mt-6">
                     <x-crypto-list :topCryptos="$topCryptos" />
                 </main>
-
-                <footer class="py-16 text-center text-sm text-black">
-                    <p>© {{ date('Y') }} CryptoWeb. All rights reserved.</p>
-                </footer>
             </div>
         </div>
     </div>

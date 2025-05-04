@@ -21,9 +21,10 @@
     <body>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
+            <x-footer />
+            <x-button-scroll-to-top />
         </div>
 
         @livewireScripts
-        <x-button-scroll-to-top />
     </body>
 </html>

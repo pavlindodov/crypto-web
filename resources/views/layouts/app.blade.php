@@ -51,6 +51,8 @@
         @stack('modals')
         @stack('scripts')
         @livewireScripts
+
+        <x-footer />
         <x-button-scroll-to-top />
     </body>
 </html>
