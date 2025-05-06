@@ -19,8 +19,9 @@
         @livewireStyles
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="div-exclude font-sans bg-gray-100 text-gray-900 antialiased">
             {{ $slot }}
+            <x-dark-mode-toggle />
             <x-footer />
             <x-button-scroll-to-top />
         </div>

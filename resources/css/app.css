@@ -72,14 +72,6 @@
         @apply border-gray-700 !important;
     }
 
-    .dark nav {
-        @apply bg-gray-800 text-white !important;
-    }
-
-    .dark header {
-        @apply bg-gray-800 text-white !important;
-    }
-
     .dark div:not(.div-exclude) {
         @apply bg-gray-800 text-white !important;
     }
@@ -134,9 +126,5 @@
     .dark .box {
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.400), 0 4px 6px -4px rgba(0, 0, 0, 0.400);
         --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-    }
-
-    .dark footer {
-        @apply bg-gray-800 !important;
     }
 }

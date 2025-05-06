@@ -1,12 +1,12 @@
 <x-guest-layout>
-    <div class="relative overflow-hidden">
+    <div class="div-exclude relative overflow-hidden">
         <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
 
-        <div class="relative min-h-screen flex flex-col items-center justify-cente">
-            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+        <div class="relative min-h-screen flex flex-col items-center justify-center div-exclude">
+            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl div-exclude">
 
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                    <div class="flex lg:justify-center lg:col-start-2">
+                    <div class="div-exclude flex lg:justify-center lg:col-start-2">
                         <!-- Logo -->
                         <x-application-logo/>
                     </div>
