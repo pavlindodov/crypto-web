@@ -9,7 +9,7 @@
                 </div>
             </div>
         @else
-            <div class="list-container overflow-hidden shadow-xl sm:rounded-lg bg-white p-4">
+            <div class="list-container overflow-hidden shadow-xl sm:rounded-lg bg-white p-4 opacity-80">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach($topCryptos as $crypto)
                         <a href="{{ route('tradingview', ['symbol' => $crypto['symbol']]) }}" class="block">
