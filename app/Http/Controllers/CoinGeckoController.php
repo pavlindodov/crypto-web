@@ -1,34 +1,28 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\Services\CoinGeckoService;
+use App\Models\Crypto;
 
 class CoinGeckoController extends Controller
 {
-    protected $coinGeckoService;
-
-    public function __construct(CoinGeckoService $coinGeckoService)
+    // Obtener criptomonedas desde la base de datos
+    private function getTopCryptosData()
     {
-        $this->coinGeckoService = $coinGeckoService;
+        return Crypto::orderByDesc('market_cap')->take(200)->get();
     }
 
-    // Método para el dashboard
+    // Dashboard
     public function showTopCryptos()
     {
         $topCryptos = $this->getTopCryptosData();
         return view('dashboard', compact('topCryptos'));
     }
 
-    // Método para la página de bienvenida
+    // Página de bienvenida
     public function showWelcome()
     {
         $topCryptos = $this->getTopCryptosData();
         return view('welcome', compact('topCryptos'));
-    }
-
-    // Método privado reutilizable
-    private function getTopCryptosData()
-    {
-        return $this->coinGeckoService->getTopCryptos();
     }
 }

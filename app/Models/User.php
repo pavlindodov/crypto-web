@@ -77,4 +77,11 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+
+    public function favorites()
+{
+    return $this->belongsToMany(Crypto::class, 'crypto_user')->withPivot('available')->withTimestamps();
+}
+
 }
