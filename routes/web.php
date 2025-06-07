@@ -2,19 +2,20 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoinGeckoController;
 use App\Http\Controllers\TradingViewController;
+use App\Http\Controllers\CryptoFavoriteController;
 
-// Ruta de inicio (página principal)
+// Ruta pública (inicio)
 Route::get('/', [CoinGeckoController::class, 'showWelcome']);
 
-// Grupo de rutas protegidas que requieren autenticación
+// Grupo de rutas protegidas
 Route::middleware([
-    'auth:sanctum',  // Asegura que el usuario esté autenticado usando Sanctum
-    config('jetstream.auth_session'),  // Middleware adicional de Jetstream para gestionar la sesión
-    'verified',  // Asegura que el correo del usuario esté verificado
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
 ])->group(function () {
-    // Ruta protegida para acceder al dashboard
+    // Dashboard y otras rutas privadas
     Route::get('/dashboard', [CoinGeckoController::class, 'showTopCryptos'])->name('dashboard');
-
-    // Ruta protegida para TradingView
     Route::get('/tradingview/{symbol}', [TradingViewController::class, 'show'])->name('tradingview');
+    Route::post('/favorites/toggle', [CryptoFavoriteController::class, 'toggle'])->name('favorites.toggle');
+    Route::get('/dashboard/filter', [CoinGeckoController::class, 'filterCryptos'])->name('dashboard.filter');
 });

@@ -79,9 +79,12 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
 
-    public function favorites()
-{
-    return $this->belongsToMany(Crypto::class, 'crypto_user')->withPivot('available')->withTimestamps();
-}
+    public function favoriteCryptos()
+    {
+        return $this->belongsToMany(Crypto::class, 'crypto_user')
+                    ->withTimestamps()
+                    ->wherePivot('available', true);
+    }
+
 
 }

@@ -12,6 +12,9 @@ class Crypto extends Model
 
     public function favoredByUsers()
     {
-        return $this->belongsToMany(User::class, 'crypto_user')->withPivot('available')->withTimestamps();
+        return $this->belongsToMany(User::class, 'crypto_user')
+                    ->withTimestamps()
+                    ->wherePivot('available', true);
     }
+
 }

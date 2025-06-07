@@ -6,10 +6,11 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/js/app.js',
                 'resources/css/scroll-to-top.css',
+                'resources/js/app.js',
                 'resources/js/scroll-to-top.js',
                 'resources/js/tradingview-widget.js',
+                'resources/js/favorite-toggle.js',
             ],
             refresh: true,
         }),

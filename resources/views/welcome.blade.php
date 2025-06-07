@@ -27,7 +27,7 @@
                 </header>
 
                 <main class="mt-6">
-                    <x-crypto-list :topCryptos="$topCryptos" />
+                    <x-crypto-list :cryptos="$cryptos" />
                 </main>
             </div>
         </div>

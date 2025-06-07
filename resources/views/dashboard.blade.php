@@ -6,5 +6,5 @@
         </h2>
     </x-slot>
     <x-application-dashboard-background />
-    <x-crypto-list :topCryptos="$topCryptos" />
+    <x-crypto-list :cryptos="$cryptos" />
 </x-app-layout>
