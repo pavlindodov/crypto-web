@@ -13,6 +13,8 @@
 .phpactor.json
 .phpunit.result.cache
 htaccess
+.env
+.env hostinger
 Homestead.json
 Homestead.yaml
 auth.json
