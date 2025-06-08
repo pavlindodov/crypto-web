@@ -5,5 +5,5 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <x-crypto-list :cryptos="$cryptos" />
+    <x-crypto-list :cryptos="$cryptos" :show-favorites="$showFavorites" />
 </x-app-layout>

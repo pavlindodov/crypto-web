@@ -11,7 +11,7 @@
             </div>
         @else
             <div class="list-container overflow-hidden shadow-xl sm:rounded-lg bg-white p-4 opacity-80">
-                <x-dashboard-list-toggle :show-favorites="$showFavorites" />
+            <x-dashboard-list-toggle :show-favorites="$showFavorites" />
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach($cryptos as $crypto)
                         <a href="{{ route('tradingview', ['symbol' => $crypto->symbol]) }}" class="block">
