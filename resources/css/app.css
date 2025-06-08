@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+*, ::before, ::after {
+    border-color: #e5e7eb00 !important;
+}
+
 [x-cloak] {
     display: none;
 }
+
 
 .overflow-hidden {
     overflow: hidden;
