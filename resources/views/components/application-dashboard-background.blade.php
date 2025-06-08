@@ -1,1 +1,4 @@
-<img id="background" class="fixed w-full opacity-50 pointer-events-none z-0" src="{{ asset('images/background.png') }}" alt="dashboard-background" />
+<div
+    class="background fixed inset-0 bg-no-repeat bg-cover bg-center opacity-10 pointer-events-none"
+    style="background-image: url('{{ asset('images/background.png') }}');"
+></div>
