@@ -61,7 +61,7 @@ class CoinGeckoService
     {
         $cryptos = $this->getTopCryptos();
         $dataToUpsert = [];
-        //$apiCryptoIds = [];
+        $apiCryptoIds = [];
 
         foreach ($cryptos as $crypto) {
             $dataToUpsert[] = [
@@ -76,7 +76,7 @@ class CoinGeckoService
                 'created_at' => now(),
             ];
 
-            //$apiCryptoIds[] = $crypto['id']; // <--- Recolecta los IDs de la API
+            $apiCryptoIds[] = $crypto['id']; // <--- Recolecta los IDs de la API
         }
 
         Crypto::upsert(
@@ -86,8 +86,8 @@ class CoinGeckoService
         );
 
 
-        // Limpieza: elimina los que ya no están en la API
-        //Crypto::whereNotIn('coingecko_id', $apiCryptoIds)->delete();
+        //Limpieza: elimina los que ya no están en la API
+        Crypto::whereNotIn('coingecko_id', $apiCryptoIds)->delete();
 
     }
 }
