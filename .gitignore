@@ -6,15 +6,13 @@
 /storage/*.key
 /storage/pail
 /vendor
+.htaccess
 .env
 .env hostinger
 .env.backup
 .env.production
 .phpactor.json
 .phpunit.result.cache
-htaccess
-.env
-.env hostinger
 Homestead.json
 Homestead.yaml
 auth.json
