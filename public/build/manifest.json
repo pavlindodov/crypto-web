@@ -1,0 +1,36 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-ue3UUPNo.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/scroll-to-top.css": {
+    "file": "assets/scroll-to-top-BC4V_P_h.css",
+    "src": "resources/css/scroll-to-top.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DGlHa2bn.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/favorite-toggle.js": {
+    "file": "assets/favorite-toggle-C99YzUgi.js",
+    "name": "favorite-toggle",
+    "src": "resources/js/favorite-toggle.js",
+    "isEntry": true
+  },
+  "resources/js/scroll-to-top.js": {
+    "file": "assets/scroll-to-top-CcxmpNZc.js",
+    "name": "scroll-to-top",
+    "src": "resources/js/scroll-to-top.js",
+    "isEntry": true
+  },
+  "resources/js/tradingview-widget.js": {
+    "file": "assets/tradingview-widget-Dv4SOjwb.js",
+    "name": "tradingview-widget",
+    "src": "resources/js/tradingview-widget.js",
+    "isEntry": true
+  }
+}
