@@ -54,7 +54,7 @@ class CoinGeckoService
     }
 
     /**
-     * Sincroniza las criptomonedas del top 100 con la base de datos.
+     * Sincroniza las criptomonedas del top 200 con la base de datos.
      * Inserta nuevas, actualiza las existentes o elimina las que ya no estan presentes en la llamada según su coingecko_id.
      */
     public function syncCryptosToDatabase(): void
